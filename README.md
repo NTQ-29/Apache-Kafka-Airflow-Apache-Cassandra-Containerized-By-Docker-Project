@@ -1,10 +1,10 @@
 # Apache-Kafka-Airflow-Apache-Cassandra-Containerized-By-Docker-Project
 Automated, ETL streaming data (real-time) pipeline that has Random Public API Ingestion . Streams it through Apache Kafka, processes it with Apache Spark, and stores it in Apache Cassandra — all orchestrated by Apache Airflow and containerized with Docker.
 
-#Real-Time Data Engineering Pipeline
+# Real-Time Data Engineering Pipeline
 A fully automated, end-to-end streaming data pipeline that ingests random user data from a public API, streams it through Apache Kafka, processes it with Apache Spark, and stores it in Apache Cassandra — all orchestrated by Apache Airflow and containerized with Docker.
 
-📐 Architecture
+# Architecture
 randomuser.me API
         ↓
   Apache Airflow          ← Orchestrates & schedules the pipeline (@daily)
@@ -17,7 +17,7 @@ randomuser.me API
         ↓
   Apache Cassandra        ← Stores final structured user records
 
- #Tech Stack
+# Tech Stack
 ToolPurposePythonCore scripting languageApache AirflowPipeline orchestration & schedulingApache KafkaReal-time message streamingApache ZookeeperKafka cluster coordinationApache SparkStream processing & transformationApache CassandraNoSQL distributed data storageDocker & Docker ComposeContainerized infrastructurePostgreSQLAirflow metadata backend
 
 # Project Structure
@@ -30,11 +30,11 @@ DE_Streaming_Project/
 ├── .gitignore
 └── README.md
 
-#Getting Started
+# Getting Started
 Prerequisites
 Make sure you have the following installed:
 
-#Docker Desktop
+# Docker Desktop
 Python 3.11 (3.14 is NOT supported by PySpark)
 PyCharm or any Python IDE
 
@@ -51,7 +51,7 @@ Allow ~60 seconds for all containers to become healthy.
 bashdocker ps
 ServiceURLAirflow UIhttp://localhost:8080Kafka Control Centerhttp://localhost:9021Spark Master UIhttp://localhost:9090Cassandralocalhost:9042
 
-Airflow default credentials: username: admin / password: admin
+# Airflow default credentials: username: admin / password: admin
 
 5. Trigger the Pipeline
 
@@ -89,10 +89,10 @@ cassandra-driver
 pyspark
 apache-airflow
 
-#Common Issues
+# Common Issues
 ProblemFixPySpark import errorMake sure you're using Python 3.11, not 3.13+Kafka connection refusedWait for broker container to be fully healthy (docker ps)Airflow DAG not showingCheck that ./DAG volume is correctly mounted in docker-composeCassandra timeoutAllow extra startup time (~60–90s) before running Spark job
 
-#Future Improvements
+# Future Improvements
 
 Add data quality checks with Great Expectations
 Introduce dbt for transformation layer
@@ -101,10 +101,10 @@ Add monitoring with Grafana + Prometheus
 Stream multiple API endpoints concurrently
 
 
-#License
+# License
 This project is open source and available under the MIT License.
 
-#Acknowledgements
+# Acknowledgements
 
 Random User Generator API
 Confluent Kafka Docker Images
